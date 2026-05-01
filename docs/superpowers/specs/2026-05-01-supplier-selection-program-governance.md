@@ -20,9 +20,9 @@ The first implementation deliverable is a reward-model dataset and evaluator, no
 
 ## Current Phase
 
-Current phase: `M0 Specs`
+Current phase: `M0 Specs Accepted`
 
-The program should not move into implementation until the five-document spec set is reviewed and accepted.
+The five-document spec set has been reviewed against the M0 gate and is accepted for M1 Dataset + Evaluator issue creation. Implementation should still start from milestone-scoped GitHub issues that link back to the approved specs.
 
 ## Source-Of-Truth Document Map
 
@@ -95,20 +95,20 @@ Recommended labels:
 - `agent`
 - `tests`
 
-Initial issues to create after spec review:
+Initial issue tracking:
 
-| Issue | Milestone | Spec |
-| --- | --- | --- |
-| Docs: finalize supplier-selection spec set | M0 | Governance + all child specs |
-| Dataset: supplier-selection case factory | M1 | Dataset + evaluator |
-| Dataset: candidate action and outcome evaluator | M1 | Dataset + evaluator |
-| Dataset: risk-adjusted best-action selection | M1 | Dataset + evaluator |
-| Evaluator: dataset quality reports | M1 | Dataset + evaluator |
-| LLM interfaces: teacher and verifier mocks | M2 | Reward model + GRPO |
-| Reward data: rationale schema and consistency filter | M2 | Reward model + GRPO |
-| Export: SFT JSONL | M2 | Reward model + GRPO |
-| Reward model: GRPO pilot scaffold | M3 | Reward model + GRPO |
-| Agent: orchestrator-executor-verifier interfaces | M4 | Agent architecture |
+| Issue | Milestone | Spec | Tracking |
+| --- | --- | --- | --- |
+| Docs: finalize supplier-selection spec set | M0 | Governance + all child specs | [#1](https://github.com/kishorkukreja/Supplychain-FinRL/issues/1) |
+| Dataset: supplier-selection case factory | M1 | Dataset + evaluator | Create after #1 is closed |
+| Dataset: candidate action and outcome evaluator | M1 | Dataset + evaluator | Create after #1 is closed |
+| Dataset: risk-adjusted best-action selection | M1 | Dataset + evaluator | Create after #1 is closed |
+| Evaluator: dataset quality reports | M1 | Dataset + evaluator | Create after #1 is closed |
+| LLM interfaces: teacher and verifier mocks | M2 | Reward model + GRPO | Later milestone |
+| Reward data: rationale schema and consistency filter | M2 | Reward model + GRPO | Later milestone |
+| Export: SFT JSONL | M2 | Reward model + GRPO | Later milestone |
+| Reward model: GRPO pilot scaffold | M3 | Reward model + GRPO | Later milestone |
+| Agent: orchestrator-executor-verifier interfaces | M4 | Agent architecture | Later milestone |
 
 ## Acceptance Gates
 
@@ -120,6 +120,19 @@ Initial issues to create after spec review:
 - Each child spec has one clear ownership area.
 - The first implementation milestone can be converted into GitHub issues.
 - The agent is defined but does not pull agent implementation into M1.
+
+M0 review result on 2026-05-01: accepted.
+
+Review notes:
+
+- The governance roadmap links all four child specs and the research note.
+- Each child spec links back to this roadmap and declares its ownership boundary.
+- The use case contract defines supplier selection recommend + critique.
+- The dataset + evaluator spec is implementable without unresolved product decisions.
+- The reward model + GRPO spec keeps teacher, external verifier, reward model, and GRPO responsibilities separate.
+- The agent architecture spec defines orchestrator, executor, verifier, and optional external escalation without authorizing agent implementation in M1.
+- The research note is referenced as background only.
+- M1 Dataset + Evaluator issues can be created from the accepted dataset + evaluator spec.
 
 ### M1 Dataset + Evaluator Gate
 
@@ -158,17 +171,18 @@ Initial issues to create after spec review:
 | 2026-05-01 | Specs are source-of-truth contracts; GitHub issues are implementation tasks. |
 | 2026-05-01 | Use five documents: governance plus four child specs. |
 | 2026-05-01 | The reward model later acts as verifier inside the supplier-selection agent. |
+| 2026-05-01 | M0 Specs gate accepted; M1 Dataset + Evaluator issue creation is unblocked after issue #1 is closed. |
 
 ## Status Table
 
 | Area | Status | Notes |
 | --- | --- | --- |
-| Governance roadmap | Drafted | Needs review before issue creation |
-| Use case contract | Drafted | Defines recommend + critique behavior |
-| Dataset + evaluator | Drafted | Defines synthetic-only v1 |
-| Reward model + GRPO | Drafted | Defines SFT and GRPO pilot boundaries |
-| Agent architecture | Drafted | Later-stage architecture only |
-| GitHub issues | Not created | Create only after specs are reviewed |
+| Governance roadmap | Accepted | Reviewed for M0 gate |
+| Use case contract | Accepted | Defines recommend + critique behavior |
+| Dataset + evaluator | Accepted | Defines synthetic-only v1 |
+| Reward model + GRPO | Accepted | Defines SFT and GRPO pilot boundaries |
+| Agent architecture | Accepted | Later-stage architecture only |
+| GitHub issues | M0 created | [#1](https://github.com/kishorkukreja/Supplychain-FinRL/issues/1) tracks this review; create M1 issues after #1 is closed |
 
 ## Implementation Rule
 

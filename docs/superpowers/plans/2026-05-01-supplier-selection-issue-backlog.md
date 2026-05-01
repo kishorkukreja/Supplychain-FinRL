@@ -10,7 +10,7 @@ The governing roadmap remains the oversight source of truth:
 
 `docs/superpowers/specs/2026-05-01-supplier-selection-program-governance.md`
 
-This backlog document records the issue sequence and issue body structure so the team does not lose alignment before GitHub issues are enabled and created.
+This backlog document records the issue sequence and issue body structure so the team does not lose alignment as GitHub issues are created from the approved specs.
 
 ## Issue Unit Rule
 
@@ -75,6 +75,10 @@ Labels:
 Milestone:
 
 `M0 Specs`
+
+GitHub issue:
+
+https://github.com/kishorkukreja/Supplychain-FinRL/issues/1
 
 Body:
 
@@ -251,13 +255,13 @@ Recommended milestones:
 
 Current status:
 
-- GitHub Issues were disabled on `kishorkukreja/Supplychain-FinRL` during the last creation attempt.
-- No GitHub issue was created.
-- Enable Issues in the repository settings before retrying issue creation.
+- GitHub issue #1 was created for `Docs: finalize supplier-selection spec set`.
+- The M0 five-document spec set has been reviewed and accepted in the governing roadmap.
+- No M1 implementation issues have been created yet.
 
-Next action after Issues are enabled:
+Next action after issue #1 is closed:
 
-1. Create the M0 issue only.
-2. Review and accept the five-document spec set.
-3. Create M1 issues after M0 is accepted.
+1. Create the M1 Dataset + Evaluator issues.
+2. Link each M1 issue to the relevant accepted dataset + evaluator spec section.
+3. Add verification commands to each M1 issue.
 4. Do not create M2-M4 issues until their dependency gates are satisfied.
